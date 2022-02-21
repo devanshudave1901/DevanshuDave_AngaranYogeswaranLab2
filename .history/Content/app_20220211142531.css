@@ -1,0 +1,74 @@
+#Contactform {
+  padding: 10px 90px 50px 100px;
+}
+#Contactform label {
+  color: cornsilk;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#Contactform button {
+  margin-top: 20px;
+  margin-left: 500px;
+}
+.formInputBox {
+  padding-left: 60px;
+  margin: 8px 0;
+  border: dashed;
+  box-sizing: border-box;
+}
+
+#contactId {
+  padding-left: 520px;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#pArea {
+  padding-top: 40px;
+  padding-left: 250px;
+  padding-bottom: 100px;
+}
+#pArea1 {
+  padding-top: 40px;
+  padding-left: 150px;
+  padding-bottom: 100px;
+  padding-right: 90px;
+}
+#contentArea {
+  border-radius: 30px;
+  color: white;
+}
+
+#aboutId {
+  padding-left: 520px;
+  color: black;
+}
+#serviceID {
+  padding-left: 520px;
+  color: black;
+}
+#projectsID {
+  padding-left: 520px;
+  color: black;
+}
+#heading1 {
+  color: black;
+  padding-left: 50px;
+}

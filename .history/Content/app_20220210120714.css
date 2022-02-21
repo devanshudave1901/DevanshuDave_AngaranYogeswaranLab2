@@ -1,0 +1,14 @@
+.Contactform {
+  padding: 100px 90px 550px 400px;
+}
+
+.formInputBox {
+  padding-left: 60px;
+  margin: 8px 0;
+  border: dashed;
+  box-sizing: border-box;
+}
+
+#contactId {
+  padding-left: 490px;
+}

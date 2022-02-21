@@ -1,0 +1,132 @@
+/*padding for contact form*/
+#Contactform {
+  padding: 10px 90px 50px 100px;
+}
+/*designing the label*/
+
+#Contactform label {
+  color: cornsilk;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+/*designing the button*/
+
+#Contactform button {
+  margin-top: 20px;
+  margin-left: 500px;
+}
+/*designing the input boxes for the form*/
+
+.formInputBox {
+  padding-left: 60px;
+  margin: 8px 0;
+  border: dashed;
+  box-sizing: border-box;
+}
+/*designing the contact id*/
+
+#contactId {
+  padding-left: 520px;
+  color: black;
+}
+/*overall design*/
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#pArea {
+  padding-top: 40px;
+  padding-left: 250px;
+  padding-bottom: 100px;
+}
+#pArea1 {
+  padding-top: 40px;
+  padding-left: 150px;
+  padding-bottom: 100px;
+  padding-right: 90px;
+}
+#contentArea {
+  border-radius: 30px;
+  color: white;
+}
+
+#aboutId {
+  padding-left: 520px;
+  color: black;
+}
+#serviceID {
+  padding-left: 520px;
+  color: black;
+}
+#projectsID {
+  padding-left: 520px;
+  color: black;
+}
+#heading1 {
+  color: white;
+  padding-left: 5px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+#heading2 {
+  padding-top: 50px;
+}
+#resumeLink {
+  padding-top: 20px;
+}
+img {
+  background-repeat: no-repeat;
+}
+#heading3 {
+  color: black;
+  padding-top: 100px;
+  padding-left: 360px;
+  padding-right: 100px;
+  padding-bottom: 150px;
+}
+#loginHeading {
+  color: black;
+  font-size: xxx-large;
+  margin-bottom: 20px;
+  margin-left: 396px;
+}
+
+#loginSubmit {
+  margin-top: 20px;
+  margin-left: 700px;
+  padding: 10px;
+}
+
+#usernameInput {
+  margin-left: 400px;
+  width: 30%;
+}
+
+#passwordInput {
+  margin-left: 400px;
+  width: 30%;
+}
+
+#registerHeading {
+  color: black;
+  font-size: 50px;
+}
+
+#titleHeadingRegister {
+  color: black;
+  font-size: 30px;
+}

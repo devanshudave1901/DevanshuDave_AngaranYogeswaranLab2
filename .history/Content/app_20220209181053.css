@@ -1,0 +1,9 @@
+.Contactform {
+  padding: 100px 90px 550px 400px;
+}
+
+.formInputBox {
+  padding-left: 60px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

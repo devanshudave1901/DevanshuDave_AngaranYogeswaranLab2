@@ -1,0 +1,22 @@
+#Contactform {
+  padding: 10px 90px 50px 100px;
+}
+#Contactform label {
+  color: cornsilk;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#Contactform button {
+  padding-top: 20px;
+}
+.formInputBox {
+  padding-left: 60px;
+  margin: 8px 0;
+  border: dashed;
+  box-sizing: border-box;
+}
+
+#contactId {
+  padding-left: 550px;
+}
