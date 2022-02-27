@@ -22,7 +22,7 @@ class User {
     this.confirmPassword = confirmPassword;
   }
 }
-(() => {
+() => {
   // added a event listener which listens to the load event and calls start function
   window.addEventListener("load", start);
 
@@ -292,23 +292,27 @@ class User {
     this.form.reset();
   }
 
+  var validateBool;
+
   function registerPage() {
     // using hide method to hide the div element from the page.
     $("#ErrorMessage").hide();
 
+    var firstName1;
     // using change method so whenever something changes in the text box the block of code implements
     $("#inputFirstName").change((e) => {
       // using if and else to validate the minimum length of the first name.
       var firstName = $("#inputFirstName").val();
-
+      firstName1 = firstName;
       if ($("#inputFirstName").val().length < 2) {
         $("#ErrorMessage").html(
           "First Name should be greater than 2 or not empty"
         );
-
+        validateBool = false;
         $("#ErrorMessage").show();
       } else {
         $("#ErrorMessage").hide();
+        validateBool = true;
       }
     });
     $("#inputLastName").change((e) => {
