@@ -1,7 +1,7 @@
 /**Name :
  *    Student 1 - Devanshu Dave(100785733)
  *    Student 2 - Angaran Yogeswaran(100754161)
- * Date Completed : 11/02/2022.
+ * Date Completed : 27/02/2022.
  *
  */
 
@@ -283,27 +283,39 @@ class User {
     document.body.style.backgroundRepeat = "repeat";
     document.body.style.opacity = "0.9";
   }
+   /**
+   * Function is call to do functionality on login page when its called
+   *
+   */
   function loginPage() {
+    //Sets Background image
     $("body").css("background-image", "url(images/bgImage1.jpeg)");
 
     $("body").css("background-repeat", "repeat");
 
     $("body").css("background-opacity", "0.9");
-
+    //When the login submission button is clicked this functionality is called
     $("#loginSubmit").click((e) => {
+      //Preventing the default feedback
       e.preventDefault();
-
+      //Storing the value of userNameInput1 in the user1input value  
       let user1input = $("#usernameInput1").val();
 
-      console.log($("#usernameInput1").val());
+      //Adding the user1input to the nav bar as well as the user-check logo
+      $("#navUserName").prepend(
 
-      $("#navUserName").prepend(user1input);
+       "   " +  "<i class='fa-solid fa-user-check'></i>" + user1input + "    "
+      );
+      //Replace the login text with Log Out
+      $(" <a class='nav-link' href='./login.html'> <i class='fa-solid fa-user'></i>  Log Out</a>").replaceAll("#loginName");
     });
   }
+  //resets the form
   function resets() {
     this.form.reset();
   }
-
+   /**Function is call to do functionality on register page when its called
+   */ 
   function registerPage() {
     // using hide method to hide the div element from the page.
     $("#ErrorMessage").hide();
@@ -312,77 +324,108 @@ class User {
     $("#inputFirstName").change((e) => {
       // using if and else to validate the minimum length of the first name.
       var firstName = $("#inputFirstName").val();
-
+      // if the length og the firstName is less than 2
+      // store "First name should be greater than 2"
+      // in the html of the element with the ID ErrorMessage
       if ($("#inputFirstName").val().length < 2) {
         $("#ErrorMessage").html(
           "First Name should be greater than 2 or not empty"
         );
-
+        //Show the Errormessage  
         $("#ErrorMessage").show();
+        //Otherwise hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
       }
     });
+    //Whenever the last name block is changed we
+    //use the change method to implement the
+    //block of code
     $("#inputLastName").change((e) => {
+      //Storing the value of the inputLastName in the lastName Variable
       var lastName = $("#inputLastName").val();
+      //If the value of the text in LastName box is less than 2 then
+      //store the text "Last Name should be greater than 2" in
+      // the html of the element with that ID.
       if ($("#inputLastName").val().length < 2) {
         $("#ErrorMessage").html(" Last Name should be greater than 2 ");
+        //Set validateBool to false
         validateBool = false;
-
+        //Show the ErrorMessage
         $("#ErrorMessage").show();
+        //Hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
       }
     });
-
+    //Whenever thie inputEmail is changed
     $("#inputEmail").change((e) => {
+      //store the value in the regex variable
       let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\..0-9a-zA-Z]+)\.([a-zA-Z]){1,8}$/;
-
+      // store the value of email block in the emailValue variable
       let emailValue = $("#inputEmail").val();
-
+      //if the value doesnt match
       if (!regex.test(emailValue)) {
+        //if value of inputEmail is less than 8
         if ($("#inputEmail").val().length < 8) {
+          // set the value of the ErrorMessage to Email is not valid
           $("#ErrorMessage").html(" Email is not Valid ");
-
+          //Show the ErrorMessage
           $("#ErrorMessage").show();
         }
+        //Other wise hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
       }
     });
-
+    //if the text of the input password is changed then
+    //store this valye in the passwordInputRegisterValue
     $("#inputPassword").change((e) => {
       var passwordInputRegister = $("#inputPassword").val();
-
+      //If the passwordInputRegister is less than 6
       if (passwordInputRegister.length < 6) {
+        //Set the value of this element to say
+        //Password Field must be above 6 characters.
+        //Too small Password
         $("#ErrorMessage").html(
           "Password Field must be above 6 characters. Too small Password"
         );
+        //Show ErrorMessage
         $("#ErrorMessage").show();
       } else {
+        //Hide ErroMessage
         $("#ErrorMessage").hide();
       }
     });
+    //If the text in the inputConfirmPassword is changed
+    //store this value in the confirmPasswordInputRegister variable
     $("#inputConfirmPassword").change((e) => {
       var confirmPasswordInputRegister = $("#inputConfirmPassword").val();
-
+      //if the length of the text in the variable is less than 6 than
+      //output the errorMessage which says the Confirm Password Field must be
+      //above 6 characters. 
       if (confirmPasswordInputRegister.length < 6) {
         $("#ErrorMessage").html(
           "Confirm Password Field must be above 6 characters. Too small Password"
         );
+        //Show the error message
         $("#ErrorMessage").show();
       } else if (
+        // if input password and confirm password doesn't match show error message
         $("#inputPassword").val() != $("#inputConfirmPassword").val()
       ) {
         $("#ErrorMessage").html("Password and Confirm Password Should match");
         $("#ErrorMessage").show();
+        //Other wise hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
       }
     });
+    //When the registerButton is clicked preventDefault feedback
     $("#registerButton").click((e) => {
       e.preventDefault();
       // console.log(User(firstName, lastName, emailValue, passwordInputRegister));
+      //getting all the values of all variables and saving it in const inputFormR
       const inputFormR = new User(
         $("#inputFirstName").val(),
         $("#inputLastName").val(),
@@ -394,12 +437,14 @@ class User {
         $("#inputConfirmPassword").val()
       );
       console.log(inputFormR);
+      //Setting value of variables to null
       document.getElementById("inputFirstName").value = null;
       document.getElementById("inputLastName").value = null;
       document.getElementById("inputEmail").value = null;
       document.getElementById("inputPassword").value = null;
       document.getElementById("inputConfirmPassword").value = null;
     });
+    //Change Background image and opacity of the background
     $("body").css("background-image", "url(images/bgImage1.jpeg)");
     $("body").css("background-repeat", "repeat");
     $("body").css("background-opacity", "0.9");
