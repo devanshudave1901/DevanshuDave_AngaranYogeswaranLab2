@@ -270,78 +270,12 @@ function loginPage() {
   $("body").css("background-opacity", "0.9");
 }
 function registerPage() {
-  // using hide method to hide the div element from the page.
+  // $("#formRegister").;
   $("#ErrorMessage").hide();
-  // using change method so whenever something changes in the text box the block of code implements
-  $("#inputFirstName").change((e) => {
-    // using if and else to validate the minimum length of the first name.
+  // $("#formRegister").submit((e))=>{});
 
-    if ($("#inputFirstName").val().length < 2) {
-      $("#ErrorMessage").html(
-        "First Name should be greater than 2 or not empty"
-      );
-
-      $("#ErrorMessage").show();
-    } else {
-      $("#ErrorMessage").hide();
-    }
-  });
-  $("#inputLastName").change((e) => {
-    if ($("#inputLastName").val().length < 2) {
-      $("#ErrorMessage").html(" Last Name should be greater than 2 ");
-
-      $("#ErrorMessage").show();
-    } else {
-      $("#ErrorMessage").hide();
-    }
-  });
-
-  $("#inputEmail").change((e) => {
-    let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\..0-9a-zA-Z]+)\.([a-zA-Z]){1,8}$/;
-
-    let emailValue = $("#inputEmail").val();
-
-    if (!regex.test(emailValue)) {
-      if ($("#inputEmail").val().length < 8) {
-        $("#ErrorMessage").html(" Email is not Valid ");
-
-        $("#ErrorMessage").show();
-      }
-    } else {
-      $("#ErrorMessage").hide();
-    }
-  });
-
-  $("#registerButton").click((e) => {
-    e.preventDefault();
-  });
-  $("#inputPassword").change((e) => {
-    var passwordInputRegister = $("#inputPassword").val();
-
-    if (passwordInputRegister.length < 6) {
-      $("#ErrorMessage").html(
-        "Password Field must be above 6 characters. Too small Password"
-      );
-      $("#ErrorMessage").show();
-    } else {
-      $("#ErrorMessage").hide();
-    }
-  });
-  $("#inputConfirmPassword").change((e) => {
-    var confirmPasswordInputRegister = $("#inputConfirmPassword").val();
-
-    if (confirmPasswordInputRegister.length < 6) {
-      $("#ErrorMessage").html(
-        "Confirm Password Field must be above 6 characters. Too small Password"
-      );
-      $("#ErrorMessage").show();
-    } else if ($("#inputPassword").val() != $("#inputConfirmPassword").val()) {
-      $("#ErrorMessage").html("Password and Confirm Password Should match");
-      $("#ErrorMessage").show();
-    } else {
-      $("#ErrorMessage").hide();
-    }
-  });
+  $("#formRegister").hide();
+  // console.log($("#inputFirstName").val());
 
   $("body").css("background-image", "url(images/bgImage1.jpeg)");
   $("body").css("background-repeat", "repeat");

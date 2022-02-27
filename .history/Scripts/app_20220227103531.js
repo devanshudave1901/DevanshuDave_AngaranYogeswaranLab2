@@ -277,6 +277,9 @@ function registerPage() {
     // using if and else to validate the minimum length of the first name.
 
     if ($("#inputFirstName").val().length < 2) {
+      // $("#ErrorMessage").append(
+      //   "<h5> First Name should be greater than 2 </h5>"
+      // );
       $("#ErrorMessage").html(
         "First Name should be greater than 2 or not empty"
       );

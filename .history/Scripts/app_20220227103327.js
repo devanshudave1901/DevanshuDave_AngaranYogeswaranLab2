@@ -277,6 +277,9 @@ function registerPage() {
     // using if and else to validate the minimum length of the first name.
 
     if ($("#inputFirstName").val().length < 2) {
+      // $("#ErrorMessage").append(
+      //   "<h5> First Name should be greater than 2 </h5>"
+      // );
       $("#ErrorMessage").html(
         "First Name should be greater than 2 or not empty"
       );
@@ -315,9 +318,8 @@ function registerPage() {
   $("#registerButton").click((e) => {
     e.preventDefault();
   });
+  var passwordInputRegister = $("#inputPassword").val();
   $("#inputPassword").change((e) => {
-    var passwordInputRegister = $("#inputPassword").val();
-
     if (passwordInputRegister.length < 6) {
       $("#ErrorMessage").html(
         "Password Field must be above 6 characters. Too small Password"
@@ -335,7 +337,7 @@ function registerPage() {
         "Confirm Password Field must be above 6 characters. Too small Password"
       );
       $("#ErrorMessage").show();
-    } else if ($("#inputPassword").val() != $("#inputConfirmPassword").val()) {
+    } else if (passwordInputRegister != confirmPasswordInputRegister) {
       $("#ErrorMessage").html("Password and Confirm Password Should match");
       $("#ErrorMessage").show();
     } else {

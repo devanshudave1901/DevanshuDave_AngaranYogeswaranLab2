@@ -82,11 +82,13 @@
       <h1 id ="registerHeading">Register</h1>
       <br/>
       <h6 id ="titleHeadingRegister">Create your own account. It's free and only takes a minutes</h6>
-   
-      <div class="alert" id="ErrorMessage">
-       
+      <div id="ErrorMessage">
+        <h5>Hello</h5>
       </div>
-      <form id="formRegister" novalidate >
+      <div class="alert alert-danger" id="ErrorMessage">
+        A simple danger alert—check it out!
+      </div>
+      <form id="formRegister">
         <div class="row">
           <div class="col-md-3">
            
@@ -111,7 +113,7 @@
         <br/>
         <div class="form-group col-md-6">
         
-          <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Confirm Password">
         </div>
         
         <button type="submit" class="btn btn-primary" id="registerButton">Register</button>
