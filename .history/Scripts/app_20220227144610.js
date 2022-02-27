@@ -297,7 +297,7 @@ class User {
 
       console.log($("#usernameInput1").val());
 
-      $("#navUserName").prepend(user1input);
+      $("#navUserName").appendTo("hello");
     });
   }
   function resets() {

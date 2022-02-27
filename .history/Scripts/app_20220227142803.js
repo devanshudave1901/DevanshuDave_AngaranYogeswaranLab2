@@ -285,20 +285,8 @@ class User {
   }
   function loginPage() {
     $("body").css("background-image", "url(images/bgImage1.jpeg)");
-
     $("body").css("background-repeat", "repeat");
-
     $("body").css("background-opacity", "0.9");
-
-    $("#loginSubmit").click((e) => {
-      e.preventDefault();
-
-      let user1input = $("#usernameInput1").val();
-
-      console.log($("#usernameInput1").val());
-
-      $("#navUserName").prepend(user1input);
-    });
   }
   function resets() {
     this.form.reset();

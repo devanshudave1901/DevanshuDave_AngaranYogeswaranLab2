@@ -293,11 +293,11 @@ class User {
     $("#loginSubmit").click((e) => {
       e.preventDefault();
 
-      let user1input = $("#usernameInput1").val();
+      let user1input = $("#usernameInput").val();
 
       console.log($("#usernameInput1").val());
 
-      $("#navUserName").prepend(user1input);
+      $("#userNameInput").append("<li>" + user1input + "</li>");
     });
   }
   function resets() {

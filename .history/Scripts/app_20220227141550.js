@@ -284,21 +284,15 @@ class User {
     document.body.style.opacity = "0.9";
   }
   function loginPage() {
-    $("body").css("background-image", "url(images/bgImage1.jpeg)");
-
-    $("body").css("background-repeat", "repeat");
-
-    $("body").css("background-opacity", "0.9");
-
-    $("#loginSubmit").click((e) => {
+    let userInput1 = $("#usernameInput").val();
+    $("#registerButton").click((e) => {
       e.preventDefault();
-
-      let user1input = $("#usernameInput1").val();
-
-      console.log($("#usernameInput1").val());
-
-      $("#navUserName").prepend(user1input);
+      console.log(userInput1);
     });
+
+    $("body").css("background-image", "url(images/bgImage1.jpeg)");
+    $("body").css("background-repeat", "repeat");
+    $("body").css("background-opacity", "0.9");
   }
   function resets() {
     this.form.reset();
