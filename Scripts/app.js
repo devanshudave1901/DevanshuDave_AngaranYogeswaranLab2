@@ -405,7 +405,7 @@ class User {
       }
     });
     //Whenever thie inputEmail is changed
-    $("#inputEmail").keydown(function() {
+    $("#inputEmail").change((e) =>  {
       //store the value in the regex variable
       let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\..0-9a-zA-Z]+)\.([a-zA-Z]){1,8}$/;
       // store the value of email block in the emailValue variable
