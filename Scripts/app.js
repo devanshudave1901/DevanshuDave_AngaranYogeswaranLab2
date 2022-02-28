@@ -330,10 +330,24 @@ class User {
     $("#inputFirstName").change((e) => {
       // using if and else to validate the minimum length of the first name.
       var firstName = $("#inputFirstName").val();
+      if($("#inputFirstName").val().length == null)
+      {
+        $("#ErrorMessage").html(
+          "First Name cannot be empty"
+        );
+
+        firstNameValidity = false;
+        //Show the Errormessage  
+        $("#ErrorMessage").show();
+        //Turn background of firstname input field red if there is error
+        $("#inputFirstName").css("background-color","red")
+        //Turn border of firstname input field red if there is error
+        $("#inputFirstName").css("border-color","red")
+      }
       // if the length og the firstName is less than 2
       // store "First name should be greater than 2"
       // in the html of the element with the ID ErrorMessage
-      if ($("#inputFirstName").val().length < 2) {
+      else if ($("#inputFirstName").val().length < 2) {
         $("#ErrorMessage").html(
           "First Name should be greater than 2 or not empty"
         );
@@ -346,7 +360,9 @@ class User {
         //Turn border of firstname input field red if there is error
         $("#inputFirstName").css("border-color","red")
         //Otherwise hide the ErrorMessage
-      } else {
+      }
+
+      else {
         //Hiding the ErrorMessage
         $("#ErrorMessage").hide();
         //Turn background color of firstname input field white if error goes away
@@ -360,7 +376,7 @@ class User {
     //Whenever the last name block is changed we
     //use the change method to implement the
     //block of code
-    $("#inputLastName").change((e) => {
+    $("#inputLastName").change((e) =>  {
       //Storing the value of the inputLastName in the lastName Variable
       var lastName = $("#inputLastName").val();
       //If the value of the text in LastName box is less than 2 then
@@ -389,7 +405,7 @@ class User {
       }
     });
     //Whenever thie inputEmail is changed
-    $("#inputEmail").change((e) => {
+    $("#inputEmail").keydown(function() {
       //store the value in the regex variable
       let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\..0-9a-zA-Z]+)\.([a-zA-Z]){1,8}$/;
       // store the value of email block in the emailValue variable
@@ -422,10 +438,10 @@ class User {
     });
     //if the text of the input password is changed then
     //store this valye in the passwordInputRegisterValue
-    $("#inputPassword").change((e) => {
+    $("#inputPassword").keydown(function() {
       var passwordInputRegister = $("#inputPassword").val();
       //If the passwordInputRegister is less than 6
-      if (passwordInputRegister.length < 6) {
+      if (passwordInputRegister.length < 6 || passwordInputRegister.length == 0  ) {
         //Set the value of this element to say
         //Password Field must be above 6 characters.
         //Too small Password
@@ -451,7 +467,7 @@ class User {
     });
     //If the text in the inputConfirmPassword is changed
     //store this value in the confirmPasswordInputRegister variable
-    $("#inputConfirmPassword").change((e) => {
+    $("#inputConfirmPassword").change((e) =>  {
       var confirmPasswordInputRegister = $("#inputConfirmPassword").val();
       //if the length of the text in the variable is less than 6 than
       //output the errorMessage which says the Confirm Password Field must be
@@ -496,6 +512,7 @@ class User {
       e.preventDefault();
       // console.log(User(firstName, lastName, emailValue, passwordInputRegister));
       //getting all the values of all variables and saving it in const inputFormR
+      //if there is not error then execute the block
       if (
 
         firstNameValidity == true &&
