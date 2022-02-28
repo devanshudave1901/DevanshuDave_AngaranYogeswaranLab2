@@ -320,6 +320,12 @@ class User {
     // using hide method to hide the div element from the page.
     $("#ErrorMessage").hide();
 
+    var firstNameValidity;
+    var lastNameValidity;
+    var varEmailNameValidity;
+    var varinputPasswordValidity;
+    var varConfirmValidity;
+
     // using change method so whenever something changes in the text box the block of code implements
     $("#inputFirstName").change((e) => {
       // using if and else to validate the minimum length of the first name.
@@ -331,11 +337,13 @@ class User {
         $("#ErrorMessage").html(
           "First Name should be greater than 2 or not empty"
         );
+        firstNameValidity = false;
         //Show the Errormessage  
         $("#ErrorMessage").show();
         //Otherwise hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
+        firstNameValidity = true;
       }
     });
     //Whenever the last name block is changed we
@@ -349,6 +357,8 @@ class User {
       // the html of the element with that ID.
       if ($("#inputLastName").val().length < 2) {
         $("#ErrorMessage").html(" Last Name should be greater than 2 ");
+
+        lastNameValidity = false;
         //Set validateBool to false
         validateBool = false;
         //Show the ErrorMessage
@@ -356,6 +366,7 @@ class User {
         //Hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
+        lastNameValidity = true;
       }
     });
     //Whenever thie inputEmail is changed
@@ -370,12 +381,14 @@ class User {
         if ($("#inputEmail").val().length < 8) {
           // set the value of the ErrorMessage to Email is not valid
           $("#ErrorMessage").html(" Email is not Valid ");
+          varEmailNameValidity = false;
           //Show the ErrorMessage
           $("#ErrorMessage").show();
         }
         //Other wise hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
+        lastNameValidity = true;
       }
     });
     //if the text of the input password is changed then
@@ -390,11 +403,13 @@ class User {
         $("#ErrorMessage").html(
           "Password Field must be above 6 characters. Too small Password"
         );
+        varinputPasswordValidity = false;
         //Show ErrorMessage
         $("#ErrorMessage").show();
       } else {
         //Hide ErroMessage
         $("#ErrorMessage").hide();
+        varinputPasswordValidity = true;
       }
     });
     //If the text in the inputConfirmPassword is changed
@@ -408,16 +423,19 @@ class User {
         $("#ErrorMessage").html(
           "Confirm Password Field must be above 6 characters. Too small Password"
         );
+        varConfirmValidity = false;
         //Show the error message
         $("#ErrorMessage").show();
       } else if (
         // if input password and confirm password doesn't match show error message
         $("#inputPassword").val() != $("#inputConfirmPassword").val()
       ) {
+        varConfirmValidity = false;
         $("#ErrorMessage").html("Password and Confirm Password Should match");
         $("#ErrorMessage").show();
         //Other wise hide the ErrorMessage
       } else {
+        varConfirmValidity = true;
         $("#ErrorMessage").hide();
       }
     });
@@ -426,6 +444,20 @@ class User {
       e.preventDefault();
       // console.log(User(firstName, lastName, emailValue, passwordInputRegister));
       //getting all the values of all variables and saving it in const inputFormR
+      if (
+
+        firstNameValidity == true &&
+
+        lastNameValidity == true &&
+
+        varEmailNameValidity == true &&
+
+        varinputPasswordValidity == true ||
+
+        varConfirmValidity == true
+
+      ) {
+
       const inputFormR = new User(
         $("#inputFirstName").val(),
         $("#inputLastName").val(),
@@ -435,6 +467,7 @@ class User {
         $("#inputEmail").val(),
         $("#inputPassword").val(),
         $("#inputConfirmPassword").val()
+
       );
       console.log(inputFormR);
       //Setting value of variables to null
@@ -443,11 +476,14 @@ class User {
       document.getElementById("inputEmail").value = null;
       document.getElementById("inputPassword").value = null;
       document.getElementById("inputConfirmPassword").value = null;
+    }
     });
     //Change Background image and opacity of the background
     $("body").css("background-image", "url(images/bgImage1.jpeg)");
     $("body").css("background-repeat", "repeat");
     $("body").css("background-opacity", "0.9");
+
+
   }
   /**
    *  start function which contains switch statement on the basis of title it calls the function representing each page
