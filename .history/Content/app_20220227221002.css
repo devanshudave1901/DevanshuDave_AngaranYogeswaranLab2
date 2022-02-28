@@ -142,9 +142,9 @@ img {
   margin-bottom: 30px;
 }
 #formRegister {
-  padding-left: 450px;
+  padding-left: 500px;
 }
 #ErrorMessage {
-  margin-left: 450px;
+  margin-left: 500px;
   color: red;
 }
