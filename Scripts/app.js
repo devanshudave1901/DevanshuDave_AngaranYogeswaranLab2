@@ -319,7 +319,7 @@ class User {
   function registerPage() {
     // using hide method to hide the div element from the page.
     $("#ErrorMessage").hide();
-
+    //validation variables for register button.
     var firstNameValidity;
     var lastNameValidity;
     var varEmailNameValidity;
@@ -337,12 +337,23 @@ class User {
         $("#ErrorMessage").html(
           "First Name should be greater than 2 or not empty"
         );
+        //Set validity variable to false
         firstNameValidity = false;
         //Show the Errormessage  
         $("#ErrorMessage").show();
+        //Turn background of firstname input field red if there is error
+        $("#inputFirstName").css("background-color","red")
+        //Turn border of firstname input field red if there is error
+        $("#inputFirstName").css("border-color","red")
         //Otherwise hide the ErrorMessage
       } else {
+        //Hiding the ErrorMessage
         $("#ErrorMessage").hide();
+        //Turn background color of firstname input field white if error goes away
+        $("#inputFirstName").css("background-color","white")
+        //Turn Border color of firstname input field green if error goes away.
+        $("#inputFirstName").css("border-color","green")
+        //Setting Validity variable to true.
         firstNameValidity = true;
       }
     });
@@ -357,15 +368,23 @@ class User {
       // the html of the element with that ID.
       if ($("#inputLastName").val().length < 2) {
         $("#ErrorMessage").html(" Last Name should be greater than 2 ");
-
+        //setting validity variable to false
         lastNameValidity = false;
         //Set validateBool to false
         validateBool = false;
         //Show the ErrorMessage
         $("#ErrorMessage").show();
+        //Turn background of lastname input field red if there is error
+        $("#inputLastName").css("background-color","red")
+        //Turn border of lastname input field red if there is error
+        $("#inputLastName").css("border-color","red")
         //Hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
+        //Turn background color of lastname input field white if error goes away
+        $("#inputLastName").css("background-color","white")
+        //Turn Border color of lastname input field green if error goes away.
+        $("#inputLastName").css("border-color","green")
         lastNameValidity = true;
       }
     });
@@ -384,11 +403,21 @@ class User {
           varEmailNameValidity = false;
           //Show the ErrorMessage
           $("#ErrorMessage").show();
+          //Turn background of email input field red if there is error
+          $("#inputEmail").css("background-color","red")
+          //Turn Border color of email input field green if error goes away.
+          $("#inputEmail").css("border-color","red")
         }
         //Other wise hide the ErrorMessage
       } else {
         $("#ErrorMessage").hide();
+        //Turn background color of email input field white if error goes away
+        $("#inputEmail").css("background-color","white")
+        //Turn Border color of email input field green if error goes away.
+        $("#inputEmail").css("border-color","green")
+        //Set validity variable to true.
         lastNameValidity = true;
+
       }
     });
     //if the text of the input password is changed then
@@ -406,9 +435,17 @@ class User {
         varinputPasswordValidity = false;
         //Show ErrorMessage
         $("#ErrorMessage").show();
+        //Turn background of password input field red if there is error
+        $("#inputPassword").css("background-color","red")
+        //Turn border of password input field red if there is error  
+        $("#inputPassword").css("border-color","red")
       } else {
         //Hide ErroMessage
         $("#ErrorMessage").hide();
+        //Turn background color of password input field white if error goes away
+        $("#inputPassword").css("background-color","white")
+        //Turn Border color of password input field green if error goes away.
+        $("#inputPassword").css("border-color","green")
         varinputPasswordValidity = true;
       }
     });
@@ -423,20 +460,35 @@ class User {
         $("#ErrorMessage").html(
           "Confirm Password Field must be above 6 characters. Too small Password"
         );
+        //set validity variable to false
         varConfirmValidity = false;
         //Show the error message
         $("#ErrorMessage").show();
+        //Turn background color of confirm password input field red if there is error        
+        $("#inputConfirmPassword").css("background-color","red")
+        //Turn border of confirm password input field red if there is error
+        $("#inputConfirmPassword").css("border-color","red")
       } else if (
         // if input password and confirm password doesn't match show error message
         $("#inputPassword").val() != $("#inputConfirmPassword").val()
       ) {
+        //validity variable set to false
         varConfirmValidity = false;
         $("#ErrorMessage").html("Password and Confirm Password Should match");
         $("#ErrorMessage").show();
+        //Turn background color of confirm password input field red if there is error        
+        $("#inputConfirmPassword").css("background-color","red")
+        //Turn border of confirm password input field red if there is error
+        $("#inputConfirmPassword").css("border-color","red")
         //Other wise hide the ErrorMessage
       } else {
+        //validity variable set to true
         varConfirmValidity = true;
         $("#ErrorMessage").hide();
+        //Turn background color of confirm password input field white if error goes away
+        $("#inputConfirmPassword").css("background-color","white")
+        //Turn Border color of confirm password input field green if error goes away.
+        $("#inputConfirmPassword").css("border-color","green")
       }
     });
     //When the registerButton is clicked preventDefault feedback
