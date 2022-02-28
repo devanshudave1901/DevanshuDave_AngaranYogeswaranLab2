@@ -125,14 +125,14 @@ img {
   color: black;
   font-size: 50px;
   margin-bottom: 20px;
-  margin-left: 210;
+  margin-left: 500px;
 }
 
 #titleHeadingRegister {
   color: black;
   font-size: 20px;
   margin-bottom: 20px;
-  margin-left: 210px;
+  margin-left: 100px;
 }
 
 #registerButton {
@@ -145,7 +145,7 @@ img {
   padding-left: 200px;
 }
 #ErrorMessage {
-  margin-left: 210px;
+  margin-left: 500px;
   color: red;
 }
 #inputBoxName

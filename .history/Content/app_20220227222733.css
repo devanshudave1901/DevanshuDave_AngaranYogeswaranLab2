@@ -125,33 +125,30 @@ img {
   color: black;
   font-size: 50px;
   margin-bottom: 20px;
-  margin-left: 210;
+  margin-left: 500px;
 }
 
 #titleHeadingRegister {
   color: black;
   font-size: 20px;
   margin-bottom: 20px;
-  margin-left: 210px;
+  margin-left: 500px;
 }
 
 #registerButton {
   margin-top: 20px;
-  margin-left: 490px;
+  margin-left: 319px;
   padding: 10px;
   margin-bottom: 30px;
 }
 #formRegister {
-  padding-left: 200px;
+  padding-left: 500px;
 }
 #ErrorMessage {
-  margin-left: 210px;
+  margin-left: 500px;
   color: red;
 }
 #inputBoxName
 {
   margin-left: 10px;
-}
-#inputBoxName1{
-  margin-left: 60px;
 }
