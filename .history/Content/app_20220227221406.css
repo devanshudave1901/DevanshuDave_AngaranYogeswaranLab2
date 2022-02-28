@@ -107,7 +107,7 @@ img {
 
 #loginSubmit {
   margin-top: 20px;
-  margin-left: 700px;
+  margin-left: 650px;
   padding: 10px;
 }
 
@@ -142,7 +142,7 @@ img {
   margin-bottom: 30px;
 }
 #formRegister {
-  padding-left: 500px;
+  margin-left: 500px;
 }
 #ErrorMessage {
   margin-left: 500px;
