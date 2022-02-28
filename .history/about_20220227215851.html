@@ -1,19 +1,16 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-    <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="Content/app.css" />
+  />
+  
     <script src="./Scripts/app.js"></script>
   </head>
   <body>
@@ -74,54 +71,49 @@
         </div>
       </div>
     </nav>
-
     <div class="jumbotron bg-secondary container" id="contentArea">
       <br />
       <br />
-      <br />
-      <h1 id ="registerHeading">Register</h1>
-      <br/>
-      <h6 id ="titleHeadingRegister">Create your own account. It's free and only takes a minutes</h6>
-   
-      <div class="alert" id="ErrorMessage">
-       
-      </div>
-      <form id="formRegister" novalidate >
+      <h1 id="aboutId"></h1>
+      <div id="pArea">
         <div class="row">
-          <div class="col-md-3">
-           
-            <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+          <div class="column">
+            <img
+              src="images/Angaran2.png"
+              alt="Angaran Picture"
+              style="width: 100%"
+            />
+            <p id="heading1"></p>
+            <a
+              href="./images/Angaran Resume 2021.docx"
+              download
+              id="resumeLink"
+            >
+              Click here to download Resume.
+            </a>
           </div>
-          <div class="col-md-3">
-            
-            <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+          <div class="column">
+            <img
+              id="dev_pic"
+              src="images/Devanshu 6.png"
+              alt="Devanshu Picture"
+              style="width: 100%"
+            />
+            <p id="heading2"></p>
+            <a
+              href="./images/DevanshuDaveResume-Summer2022.docx"
+              download
+              id="resumeLink1"
+            >
+              Click here to download Resume.
+            </a>
           </div>
         </div>
-        <br>
-        <div class="form-group col-md-6">
-          
-          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-
-        </div>
-        <br/>
-        <div class="form-group col-md-6">
-        
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        </div>
-        <br/>
-        <div class="form-group col-md-6">
-        
-          <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
-        </div>
-        
-        <button type="submit" class="btn btn-primary" id="registerButton">Register</button>
-      </form>
-          
+        <!-- 3RD Party Library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </script>
+      </div>
     </div>
-
-    <!-- 3RD Party Library-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </script>
   </body>
 </html>
